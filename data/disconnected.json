@@ -1,0 +1,81 @@
+{
+  "studies": [
+    {
+      "study_id": "S1",
+      "arms": [
+        {
+          "treatment_id": "A",
+          "responders": 12,
+          "total": 40
+        },
+        {
+          "treatment_id": "B",
+          "responders": 20,
+          "total": 40
+        },
+        {
+          "treatment_id": "C",
+          "responders": 18,
+          "total": 36
+        }
+      ]
+    },
+    {
+      "study_id": "S2",
+      "arms": [
+        {
+          "treatment_id": "B",
+          "responders": 22,
+          "total": 44
+        },
+        {
+          "treatment_id": "C",
+          "responders": 15,
+          "total": 42
+        }
+      ]
+    },
+    {
+      "study_id": "bridge",
+      "arms": [
+        {
+          "treatment_id": "C",
+          "responders": 17,
+          "total": 50
+        },
+        {
+          "treatment_id": "D",
+          "responders": 25,
+          "total": 50
+        }
+      ]
+    },
+    {
+      "study_id": "separate",
+      "arms": [
+        {
+          "treatment_id": "E",
+          "responders": 4,
+          "total": 20
+        },
+        {
+          "treatment_id": "F",
+          "responders": 7,
+          "total": 20
+        }
+      ]
+    }
+  ],
+  "tau_grid": [
+    0,
+    0.05,
+    0.15,
+    0.4,
+    1.0
+  ],
+  "solver": {
+    "tolerance": 1e-09,
+    "max_iterations": 10000
+  },
+  "normal_z": 1.95996398454
+}

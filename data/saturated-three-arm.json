@@ -1,0 +1,36 @@
+{
+  "studies": [
+    {
+      "study_id": "S1",
+      "arms": [
+        {
+          "treatment_id": "A",
+          "responders": 12,
+          "total": 40
+        },
+        {
+          "treatment_id": "B",
+          "responders": 20,
+          "total": 40
+        },
+        {
+          "treatment_id": "C",
+          "responders": 18,
+          "total": 36
+        }
+      ]
+    }
+  ],
+  "tau_grid": [
+    0,
+    0.05,
+    0.15,
+    0.4,
+    1.0
+  ],
+  "solver": {
+    "tolerance": 1e-09,
+    "max_iterations": 10000
+  },
+  "normal_z": 1.95996398454
+}
