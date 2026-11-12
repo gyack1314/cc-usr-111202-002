@@ -1,6 +1,6 @@
 # 多臂临床研究的关联证据网络合成
 
-这是研究资料维护用的独立Python项目。`data/`保存合成记录，`research_data.io`负责严格JSON读取与SHA-256来源摘要，`research_data.domain`提供当前原始资料统计，`research_data.cli`将摘要输出为JSON。字段、时间、计数和量纲见[资料约定](docs/data-contract.md)。所有研究、中心及受试者均为虚构。
+这是研究资料维护用的独立Python项目。`data/`保存合成记录，`research_data.io`负责严格JSON读取与SHA-256来源摘要，`research_data.domain`提供当前原始资料统计，`research_data.nma`在完整多臂相关协方差下做一致性相对效应网络合成(网格REML选tau、逐研究删除敏感性)，`research_data.cli`将摘要或合成结果输出为JSON。字段、时间、计数和量纲见[资料约定](docs/data-contract.md)，合成口径与结果见[网络合成说明](docs/network-synthesis.md)。所有研究、中心及受试者均为虚构。
 
 Python 3.11及以上版本可直接使用，当前没有第三方依赖。在项目根目录运行：
 
@@ -8,6 +8,7 @@ Python 3.11及以上版本可直接使用，当前没有第三方依赖。在项
 python -m unittest discover -s tests -v
 python -m compileall -q research_data tests
 python -m research_data.cli inspect data/normal.json
+python -m research_data.cli synthesize data/normal.json
 ```
 
 `inspect`只显示已有摘要，不修改来源。文件名以`invalid-`起始的资料包含故意不合法的输入，其他文件是同结构的业务边界。数据摘要与来源指纹应同时保留，原始JSON不覆盖。
